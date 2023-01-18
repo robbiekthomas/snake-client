@@ -15,6 +15,12 @@ const connect = function () {
     conn.write("Name: RKT");
   });
 
+  // conn.on("connect", () => {
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 50);
+  // });
+
   conn.on("data", (data) => console.log(data));
   conn.on("end", (end) => console.log("disconnected from the server"));
   return conn;
